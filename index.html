@@ -53,9 +53,15 @@
          </div>
       </div>
       <div id="time"></div>
-      <button class="dance-med" id="play-audio-btn" style="cursor:pointer; background:#674ea7; color:#fff; border:none; border-radius:12px; padding:16px 32px; font-size:28px; font-family:'Dancing Script',cursive; margin:16px auto; display:block;">
-         Click here to celebrate with us!
-      </button>
+      <div style="text-align:center; margin:16px auto;">
+  <span class="dance-med" style="font-size:28px; font-family:'Dancing Script',cursive; color:#674ea7;">
+    Click here
+    <button id="play-audio-btn" style="margin-left:8px; background:#674ea7; color:#fff; border:none; border-radius:50%; width:44px; height:44px; font-size:22px; vertical-align:middle; cursor:pointer; transition:transform 0.2s;">
+      ▶️
+    </button>
+    to celebrate with us!
+  </span>
+</div>
       <div class="actions">
         <a href="https://maps.app.goo.gl/tFHbLeb5DWSbcTfN6" target="_blank">
           <div class="venue">SEE THE LOCATION</div>
@@ -95,9 +101,12 @@
   document.getElementById('play-audio-btn').onclick = function() {
     var audio = document.getElementById('my_audio');
     audio.play();
+    this.classList.remove('bounce');
+    void this.offsetWidth; // reset animation
+    this.classList.add('bounce');
     var happiness = document.querySelector('.happiness');
-    happiness.classList.remove('animate'); // reset nếu đã có
-    void happiness.offsetWidth; // trigger reflow để animation chạy lại
+    happiness.classList.remove('animate');
+    void happiness.offsetWidth;
     happiness.classList.add('animate');
   };
 </script>

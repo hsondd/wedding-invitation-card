@@ -99,6 +99,10 @@
     happiness.classList.remove('animate');
     void happiness.offsetWidth;
     happiness.classList.add('animate');
+    // Chỉ chạy sakura khi bấm nút
+    if (!$('.sakura-falling').hasClass('sakura-started')) {
+      $('.sakura-falling').addClass('sakura-started').sakura();
+    }
   };
 </script>
    </body>

@@ -580,11 +580,12 @@ a {
 
 .invitation-message {
     font-family: 'Dancing Script', cursive;
-    font-weight: 300;
+    font-weight: 600;              /* Đậm hơn */
     text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 24px;
-    color: #674ea7;
-    margin-top: 5px;
+    letter-spacing: 2px;           /* Giảm khoảng cách chữ */
+    font-size: 35px;               /* To hơn một chút */
+    color: #3a256a;                /* Màu đậm hơn */
+    margin-top: 10px;
     text-align: center;
+    text-shadow: 0 1px 4px #fff, 0 1px 1px #ccc; /* Thêm bóng chữ cho nổi bật */
 }

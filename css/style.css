@@ -602,14 +602,24 @@ a {
     text-shadow: 0 1px 4px #fff, 0 1px 1px #ccc; /* Thêm bóng chữ cho nổi bật */
 }
 
-#play-audio-btn.bounce {
-  animation: bounce-btn 0.6s;
+/* Glassmorphism button style */
+.glass-btn {
+  cursor: pointer;
+  background: rgba(103, 78, 167, 0.4);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 32px;
+  font-size: 28px;
+  font-family: 'Dancing Script', cursive;
+  margin: 16px auto;
+  display: block;
+  box-shadow: 0 4px 24px rgba(103, 78, 167, 0.15);
+  backdrop-filter: blur(8px);
+  transition: transform 0.15s, box-shadow 0.15s;
 }
 
-@keyframes bounce-btn {
-  0%, 100% { transform: translateY(0);}
-  30% { transform: translateY(-18px);}
-  50% { transform: translateY(0);}
-  70% { transform: translateY(-8px);}
-  90% { transform: translateY(0);}
+.glass-btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 2px 12px rgba(103, 78, 167, 0.25);
 }

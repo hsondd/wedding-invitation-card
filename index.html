@@ -53,15 +53,9 @@
          </div>
       </div>
       <div id="time"></div>
-      <div style="text-align:center; margin:16px auto;">
-  <span class="dance-med" style="font-size:28px; font-family:'Dancing Script',cursive; color:#674ea7;">
-    Click here
-    <button id="play-audio-btn" style="margin-left:8px; background:#674ea7; color:#fff; border:none; border-radius:50%; width:44px; height:44px; font-size:22px; vertical-align:middle; cursor:pointer; transition:transform 0.2s;">
-      ▶️
-    </button>
-    to celebrate with us!
-  </span>
-</div>
+      <button class="dance-med glass-btn" id="play-audio-btn">
+         Click here to celebrate with us!
+      </button>
       <div class="actions">
         <a href="https://maps.app.goo.gl/tFHbLeb5DWSbcTfN6" target="_blank">
           <div class="venue">SEE THE LOCATION</div>
@@ -84,11 +78,11 @@
   </h2>
    <div style="display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin-top:24px;">
       <div style="text-align:center;">
-         <img src="./assets/img/qr-groom.jpeg" alt="Groom's QR" style="width:512px; border-radius:16px; border:2px solid #674ea7;">
+         <img src="./assets/img/qr-groom.jpeg" alt="Groom's QR" style="width:400px; border-radius:16px; border:2px solid #674ea7;">
          <div style="margin-top:12px; font-weight:bold;">Bride: Mai Linh</div>
       </div>
       <div style="text-align:center;">
-         <img src="./assets/img/qr-groom.jpeg" alt="Groom's QR" style="width:512px; border-radius:16px; border:2px solid #674ea7;">
+         <img src="./assets/img/qr-groom.jpeg" alt="Groom's QR" style="width:400px; border-radius:16px; border:2px solid #674ea7;">
          <div style="margin-top:12px; font-weight:bold;">Groom: Hong Son</div>
       </div>
    </div>
@@ -101,9 +95,6 @@
   document.getElementById('play-audio-btn').onclick = function() {
     var audio = document.getElementById('my_audio');
     audio.play();
-    this.classList.remove('bounce');
-    void this.offsetWidth; // reset animation
-    this.classList.add('bounce');
     var happiness = document.querySelector('.happiness');
     happiness.classList.remove('animate');
     void happiness.offsetWidth;

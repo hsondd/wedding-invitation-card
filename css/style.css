@@ -591,15 +591,15 @@ a {
 }
 
 .invitation-message {
-    font-family: 'Dancing Script', cursive;
-    font-weight: 600;              /* Đậm hơn */
+    font-family: 'Quicksand', Arial, sans-serif;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 2px;           /* Giảm khoảng cách chữ */
-    font-size: 35px;               /* To hơn một chút */
-    color: #3a256a;                /* Màu đậm hơn */
+    letter-spacing: 2px;
+    font-size: 32px;
+;
     margin-top: 10px;
     text-align: center;
-    text-shadow: 0 1px 4px #fff, 0 1px 1px #ccc; /* Thêm bóng chữ cho nổi bật */
+    text-shadow: 0 1px 4px #fff, 0 1px 1px #ccc;
 }
 
 /* Glassmorphism button style */

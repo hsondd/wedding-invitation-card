@@ -53,9 +53,9 @@
          </div>
       </div>
       <div id="time"></div>
-      <p class="dance-med">
-         Join us to celebrate this special day!
-      </p>
+      <button class="dance-med" id="play-audio-btn" style="cursor:pointer; background:#674ea7; color:#fff; border:none; border-radius:12px; padding:16px 32px; font-size:28px; font-family:'Dancing Script',cursive; margin:16px auto; display:block;">
+         Click here to celebrate with us!
+      </button>
       <div class="actions">
         <a href="https://maps.app.goo.gl/tFHbLeb5DWSbcTfN6" target="_blank">
           <div class="venue">SEE THE LOCATION</div>
@@ -91,6 +91,16 @@
       <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
       <script src='https://cdn.jsdelivr.net/gh/timoschaefer/jQuery-Sakura/jquery-sakura.min.js'></script>
       <script  src="./js/script.js"></script>
+      <script>
+  document.getElementById('play-audio-btn').onclick = function() {
+    var audio = document.getElementById('my_audio');
+    audio.play();
+    var happiness = document.querySelector('.happiness');
+    happiness.classList.remove('animate'); // reset nếu đã có
+    void happiness.offsetWidth; // trigger reflow để animation chạy lại
+    happiness.classList.add('animate');
+  };
+</script>
    </body>
 
 </html>

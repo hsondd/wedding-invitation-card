@@ -605,7 +605,7 @@ a {
 /* Glassmorphism button style */
 .glass-btn {
   cursor: pointer;
-  background: rgba(103, 78, 167, 0.4);
+  background: linear-gradient(135deg, #674ea7cc 0%, #b39ddbcc 100%);
   color: #fff;
   border: none;
   border-radius: 12px;
@@ -616,10 +616,12 @@ a {
   display: block;
   box-shadow: 0 4px 24px rgba(103, 78, 167, 0.15);
   backdrop-filter: blur(8px);
-  transition: transform 0.15s, box-shadow 0.15s;
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
 }
 
 .glass-btn:active {
   transform: scale(0.96);
   box-shadow: 0 2px 12px rgba(103, 78, 167, 0.25);
+  background: linear-gradient(135deg, #674ea7ee 0%, #b39ddbee 100%);
 }
